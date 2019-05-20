@@ -1,0 +1,42 @@
+table{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse:collapse;
+}
+  
+#top-table{
+    background: snow;
+    padding: 2px 2px 2px 2px;
+
+}
+#name{
+    text-align: left;
+    padding: 10px 0 10px 50px;
+    border: 0.5px solid white;
+}
+#name-title{
+    text-align: center;
+    padding: 10px 0 10px 50px;
+    border: 0.5px solid white;
+}
+#class{
+    text-align: center;
+    padding: 10px 0 10px 0px;
+    border: 0.5px solid white;   
+}
+#class-title{
+    
+    text-align: center;
+    padding: 10px 0 10px 0px;
+    border: 0.5px solid white;  
+}
+#users  {
+    
+    width: 100%;
+    background: skyblue;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+
