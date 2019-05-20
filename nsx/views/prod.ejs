@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="prod.css" />
+  </head>
+
+  <body>
+      
+    
+    <h1>PRODUCTS</h1>
+    <div id='products'>
+      <table>
+        <thead>
+          <tr id='prod-head'>
+            <th id='phid'>id</th>
+            <th id='phname'>name</th>
+            <th id='phamount'>amount</th>
+            <th id='phprice'>price</th>
+            <th id='phdes'>description</th>
+            <th id='phbrand'>brand_id</th>
+            <th id='phcate'>category_id</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% prods.forEach(function(prods){ %>
+          <tr id='prod-body'>
+            <th id='pbid'><%=prods.id%></th>
+            <td id='pbname'><%=prods.name%></td>
+            <td id='pbamount'><%=prods.amount%></td>
+            <td id='pbprice'><%=prods.price%></td>
+            <td id='pbdes'><%=prods.description%></td>
+            <td id='pbbrand'><%=prods.brand_id%></td>
+            <td id='pbcate'><%=prods.category_id%></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>  
+    </div>
+
+    
+
+  </body>
+</html>
+

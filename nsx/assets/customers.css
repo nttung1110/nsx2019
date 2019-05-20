@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+    padding: 10px 0 15px 0;
+}
+table {
+    width : 100%;
+}
+
+#cus-head{
+    background-color: burlywood;
+}
+#cus-body{
+    background-color: lavender;
+    
+}
+
+#chid {
+    padding: 5px 0 5px 0;
+}
+
+#cbname, #cbemail, #cbadd, #cbgender {
+    padding: 5px 0 5px 10px;
+}
+#cbphone{
+    text-align: center;
+}

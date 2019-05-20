@@ -1,0 +1,25 @@
+h1{
+    text-align: center;
+    padding: 10px 0 15px 0;
+}
+table {
+    width : 100%;
+}
+
+#farms-head{
+    background-color: burlywood;
+}
+#farms-body{
+    background-color: lavender;
+    border-collapse: collapse;
+}
+#fhid{
+    padding: 5px 0 5px 0;
+}
+#fbphone{
+    text-align: center;
+}
+
+#fbname, #fbowner, #fbaddr, #fbprod_id{
+    padding: 5px 0 5px 10px;
+}

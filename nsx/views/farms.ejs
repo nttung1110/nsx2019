@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="farms.css" />
+  </head>
+
+  <body>
+      
+    <h1>FARMS INFORMATION</h1>
+  
+    <div id='farms'>
+      <table>
+        <thead>
+          <tr id='farms-head'>
+            <th id='fhid'>id</th>
+            <th id='fhname'>name</th>
+            <th id='fhowner'>owner</th>
+            <th id='fhaddress'>address</th>
+            <th id='fhprod_id'>product_id</th>
+            <th id='fhphone'>phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% farms.forEach(function(farms){ %>
+          <tr id='farms-body'>
+            <th id='fbid'><%=farms.id%></th>
+            <td id='fbname'><%=farms.name%></td>
+            <td id='fbowner'><%=farms.owner%></td>
+            <td id='fbaddr'><%=farms.address%></td>
+            <td id='fbprod_id'><%=farms.product_id%></td>
+            <td id='fbphone'><%=farms.phone%></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>  
+    </div>
+
+    
+
+  </body>
+</html>
+

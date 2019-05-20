@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+    padding: 10px 0 15px 0;
+}
+table {
+    width : 100%;
+}
+
+#prod-head{
+    background-color: burlywood;
+}
+#prod-body{
+    background-color: lavender;
+    
+}
+
+#pdbrand{
+    padding: 5px 0 5px 0;
+}
+#phdes{
+    width: 600px;
+    padding: 5px 0 5px 10px;
+}
+#pbprice, #pbname{
+    padding: 5px 0 5px 5px;
+}
+#pbamount, #pbcate{
+    text-align: center;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="customers.css" />
+  </head>
+
+  <body>
+    <h1>CUSTOMERS INFO</h1>  
+    <div id='customers'>
+      <table>
+        <thead>
+          <tr id='cus-head'>
+            <th id='chid'>id</th>
+            <th id='chname'>name</th>
+            <th id='chemail'>email</th>
+            <th id='chadd'>address</th>
+            <th id='chphone'>phone</th>
+            <th id='chgender'>gender</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% cus.forEach(function(cus){ %>
+          <tr id='cus-body'>
+            <th id='cbid'><%=cus.id%></th>
+            <td id='cbname'><%=cus.name%></td>
+            <td id='cbemail'><%=cus.email%></td>
+            <td id='cbadd'><%=cus.address%></td>
+            <td id='cbphone'><%=cus.phone%></td>
+            <td id='cbgender'><%=cus.gender%></td>
+            
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>  
+    </div>
+
+  </body>
+</html>
+

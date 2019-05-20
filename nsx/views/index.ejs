@@ -3,30 +3,30 @@
   <head>
     <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
+
   <body>
-    <h2>Hello </h2>
-
- 
+    <h1>CATEGORIES</h1> 
+    <div id='categories'>
+      <table>
+        <thead>
+          <tr id='cate-head'>
+            <th id='cateh_id'>ID</th>
+            <th id='cateh_name'>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% cates.forEach(function(cates){ %>
+          <tr id='cate-body'>
+            <th id='cateb_id'><%=cates.id%></th>
+            <td id='cateb_name'><%=cates.name%></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>  
+    </div>
   
-  <div id='users'>
-    <table>
-      <thead>
-        <tr id='top-table'>
-          <th id='name-title'>Name</th>
-          <td id='class-title'>Class</td>
-        </tr>
-      </thead>
-      <tbody>
-        <% user.forEach(function(user){ %>
-        <tr>
-          <th id='name'><%=user.name%></th>
-          <td id='class'><%=user.class%></td>
-        </tr>
-        <% }); %>
+    
 
-      </tbody>
-    </table>  
-  </div>  
   </body>
 </html>
 
