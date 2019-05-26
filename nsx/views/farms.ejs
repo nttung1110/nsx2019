@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="farms.css" />
+    <link rel="stylesheet" type="text/css" href="/farms.css" />
   </head>
 
   <body>
@@ -12,12 +12,12 @@
       <table>
         <thead>
           <tr id='farms-head'>
-            <th id='fhid'>id</th>
-            <th id='fhname'>name</th>
-            <th id='fhowner'>owner</th>
-            <th id='fhaddress'>address</th>
-            <th id='fhprod_id'>product_id</th>
-            <th id='fhphone'>phone</th>
+            <th id='fhid'>ID</th>
+            <th id='fhname'>Name</th>
+            <th id='fhowner'>Owner</th>
+            <th id='fhaddress'>Address</th>
+            <th id='fhprod_id'>Product</th>
+            <th id='fhphone'>Phone</th>
           </tr>
         </thead>
         <tbody>
@@ -27,7 +27,9 @@
             <td id='fbname'><%=farms.name%></td>
             <td id='fbowner'><%=farms.owner%></td>
             <td id='fbaddr'><%=farms.address%></td>
-            <td id='fbprod_id'><%=farms.product_id%></td>
+         
+            <td id='fbprod_id'><a href="/products/<%=farms.product_id%>"><%=farms.prodname%></a></td>
+            
             <td id='fbphone'><%=farms.phone%></td>
           </tr>
           <% }); %>

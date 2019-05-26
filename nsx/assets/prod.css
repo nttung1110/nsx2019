@@ -21,9 +21,9 @@ table {
     width: 600px;
     padding: 5px 0 5px 10px;
 }
-#pbprice, #pbname{
+#pbprice, #pbname, #pbcate{
     padding: 5px 0 5px 5px;
 }
-#pbamount, #pbcate{
+#pbamount{
     text-align: center;
 }

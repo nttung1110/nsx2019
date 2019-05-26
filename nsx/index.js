@@ -1,13 +1,14 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const pg = require('pg')
 const port = 4000
 
 const config = {
-    user: 'postgres',
-    database: 'nsx',
-    password: 'postgre',
-    port: 5432
+    user: process.env.DB_USER,
+    database: process.env.DB_NAME,
+    password: process.env.DB_PASS,
+    port: process.env.DB_PORT
 }
 
 const pool = new pg.Pool(config)
@@ -61,13 +62,16 @@ app.get('/farms', (req,res,next) => {
         if (err) {
             console.log("Can not connect to the DB" + err);
         }
-        client.query('SELECT * FROM farms', function (err, result) {
+        client.query('SELECT farms.id, farms.name, farms.owner, farms.address, products.name as prodname, farms.product_id, farms.phone from farms, products where products.id = farms.product_id', function (err, result) {
              done()
              if (err) {
                  console.log(err)
                  res.status(400).send(err)
              }
-             res.render('farms', {farms: result.rows})
+             res.render('farms', {
+                 farms: result.rows
+                })
+           
         })
     })
 })
@@ -77,13 +81,31 @@ app.get('/products', (req,res,next) => {
         if (err) {
             console.log("Can not connect to the DB" + err);
         }
-        client.query('SELECT * FROM products', function (err, result) {
+        client.query('SELECT products.id, products.name, products.amount, products.price, products.description, products.brand_id, products.category_id, categories.name as catename FROM products, categories where products.category_id=categories.id', function (err, result) {
              done()
              if (err) {
                  console.log(err)
                  res.status(400).send(err)
              }
              res.render('prod', {prods: result.rows})
+        })
+    })
+})
+
+app.get('/products/:id', (req, res, nect) => {
+    let sql = `select * from products where id= ${req.params.id}`
+    pool.connect(function (err, client, done){
+        if (err){
+            console.log('Can not connect to the DB' + err)
+        }
+        client.query(sql, function(err,result){
+            done()
+            if (err){
+                return res.render('error', {
+                    message: 'Something went wrong !!!'
+                })
+            }
+            res.render('prod', {prods: result.rows})
         })
     })
 })

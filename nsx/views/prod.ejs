@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="prod.css" />
+    <link rel="stylesheet" type="text/css" href="/prod.css" />
   </head>
 
   <body>
@@ -12,13 +12,13 @@
       <table>
         <thead>
           <tr id='prod-head'>
-            <th id='phid'>id</th>
-            <th id='phname'>name</th>
-            <th id='phamount'>amount</th>
-            <th id='phprice'>price</th>
-            <th id='phdes'>description</th>
-            <th id='phbrand'>brand_id</th>
-            <th id='phcate'>category_id</th>
+            <th id='phid'>ID</th>
+            <th id='phname'>Name</th>
+            <th id='phamount'>Amount</th>
+            <th id='phprice'>Price</th>
+            <th id='phdes'>Description</th>
+            <th id='phbrand'>Brand</th>
+            <th id='phcate'>Category</th>
           </tr>
         </thead>
         <tbody>
@@ -30,7 +30,7 @@
             <td id='pbprice'><%=prods.price%></td>
             <td id='pbdes'><%=prods.description%></td>
             <td id='pbbrand'><%=prods.brand_id%></td>
-            <td id='pbcate'><%=prods.category_id%></td>
+            <td id='pbcate'><a href="/categories"><%=prods.catename%></a></td>
           </tr>
           <% }); %>
         </tbody>
